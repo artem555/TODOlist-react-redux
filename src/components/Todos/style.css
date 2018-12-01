@@ -1,0 +1,18 @@
+ul {
+  margin: 5px 0 0;
+  padding: 0;
+}
+
+ul li {
+  width: 250px;
+  height: 30px;
+  padding: 6px;
+  border: 1px solid grey;
+  list-style-type: none;
+  border-bottom: 0;
+  cursor: pointer;
+}
+
+ul li:last-child {
+  border-bottom: 1px solid grey;
+}
