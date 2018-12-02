@@ -1,5 +1,4 @@
 ul {
-  margin: 5px 0 0;
   padding: 0;
 }
 
@@ -7,9 +6,9 @@ ul li {
   width: 250px;
   height: 30px;
   padding: 6px;
+  margin: 10px 0 0;
   border: 1px solid grey;
   list-style-type: none;
-  border-bottom: 0;
   cursor: pointer;
 }
 

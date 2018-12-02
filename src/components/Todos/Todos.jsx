@@ -4,14 +4,17 @@ import './style.css';
 
 const Todos = ({ todos, onDeleteTodo }) => {
   const todoList = todos.length ? (
-    todos.map(todo => (
-      <ul key={todo.id}>
+    <ul>
+      {todos.map(todo => (
         <li
-          onClick={() => {onDeleteTodo(todo.id)}}>
+          role="presentation"
+          key={todo.id}
+          onClick={() => { onDeleteTodo(todo.id); }}
+        >
           {todo.content}
         </li>
-      </ul>
-    ))
+      ))}
+    </ul>
   ) : (
     <p>you have no todos left</p>
   );

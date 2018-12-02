@@ -3,17 +3,19 @@ import propTypes from 'prop-types';
 import Addtodo from '../../components/Addtodo/Addtodo';
 import Todos from '../../components/Todos/Todos';
 
-const App = props => (
+const App = ({
+  todos, content, onDeleteTodo, onAddTodo, onHandleChange,
+}) => (
   <div className="container">
     <h1>Todos</h1>
     <Todos
-      todos={props.todos}
-      onDeleteTodo={props.onDeleteTodo}
+      todos={todos}
+      onDeleteTodo={onDeleteTodo}
     />
     <Addtodo
-      content={props.content}
-      onAddTodo={props.onAddTodo}
-      onHandleChange={props.onHandleChange}
+      content={content}
+      onAddTodo={onAddTodo}
+      onHandleChange={onHandleChange}
     />
   </div>
 );
@@ -21,6 +23,7 @@ const App = props => (
 App.propTypes = {
   onHandleChange: propTypes.func.isRequired,
   onDeleteTodo: propTypes.func.isRequired,
+  onAddTodo: propTypes.func.isRequired,
   content: propTypes.string.isRequired,
   todos: propTypes.string.isRequired,
 };

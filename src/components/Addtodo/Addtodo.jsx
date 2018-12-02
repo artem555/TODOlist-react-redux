@@ -4,19 +4,21 @@ import './style.css';
 
 class Addtodo extends Component {
   onHandleSubmit = (e) => {
+    const { onAddTodo } = this.props;
     e.preventDefault();
-    this.props.onAddTodo();
+    onAddTodo();
   }
 
   render() {
+    const { content, onHandleChange } = this.props;
     return (
       <div>
         <form>
           <p>add new todo</p>
           <input
             type="text"
-            onChange={this.props.onHandleChange}
-            value={this.props.content}
+            onChange={onHandleChange}
+            value={content}
           />
           <button type="submit" onClick={this.onHandleSubmit}>add</button>
         </form>
